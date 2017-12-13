@@ -72,8 +72,8 @@ Hipchatter.prototype = {
     // Get history from room
     // Takes either a room id or room name as a parameter
     // https://www.hipchat.com/docs/apiv2/method/view_history
-    history: function(room, callback){
-        this.request('get', 'room/'+room+'/history', callback);
+    history: function(params, callback){
+        this.request('get', 'room/'+params.room_name+'/history', params, callback);
     },
     // Get all users
     // https://www.hipchat.com/docs/apiv2/method/get_all_users
